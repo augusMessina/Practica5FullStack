@@ -1,36 +1,14 @@
-import Agenda from '@/components/agenda'
-import { getClientSSR } from '@/utils/apolloclient';
-import { gql } from '@apollo/client';
+
 import Link from 'next/link'
 
 type GraphQLResponse = {getWords:{word: string}[]};
 
-export async function getServerSideProps(){
-  const query = gql`
-  query {
-    getWords {
-      word
-    }
-  }
-  `;
-
-  const client = getClientSSR();
-  const {data} = await client.query<GraphQLResponse>({
-    query
-  });
-
-  return {
-    props: {
-      data: data
-    }
-  }
-}
-
-export default function Home(props:{data: GraphQLResponse}) {
+export default function Home() {
 
   return (
     <>
-    <Agenda data={props.data} ></Agenda>
+    <h1><Link href='/doctor'>I'm a doctor</Link></h1>
+    <h1><Link href='/patient'>I'm a patient</Link></h1>
     </>
   )
 }

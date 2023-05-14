@@ -1,10 +1,8 @@
-import Agenda from '@/components/agenda'
-import DoctorData from '@/components/doctorData';
-import { getClientSSR } from '@/utils/apolloclient';
-import { gql } from '@apollo/client';
-import Link from 'next/link'
-import internal from 'stream';
+// la página es CSR porque tanto la query como las mutations utilizadas
+// necesitan varios parámetros que el cliente debe dar, siendo estos año,
+// mes y día (y hora para las mutations addSlot y removeSlot).
 
+import DoctorData from '@/components/doctorData';
 
 export default function DoctorPage() {
 

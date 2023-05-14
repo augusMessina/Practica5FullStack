@@ -4,10 +4,10 @@ export const Menu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
 `;
 
-export const AgendaMenu = styled.div`
+export const BlueBorderMenu = styled.div`
     font-weight: 600;
     font-size: 20px;
     padding-top: 20px;
@@ -25,7 +25,25 @@ export const AgendaMenu = styled.div`
     border-radius: 15px;
 `;
 
-export const ContactList = styled.div`
+export const GreenBorderMenu = styled.div`
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 7px solid green;
+    border-radius: 15px;
+`;
+
+export const ItemsList = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +76,18 @@ export const BlueButton = styled.button`
     transition: 0.3s;
     &:hover {
         background: darkblue;
+    }
+`;
+
+export const RedButton = styled.button`
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        background: #8B0000;
     }
 `;
 
